@@ -1,6 +1,9 @@
 import { food } from '/food.js';
 
 for (let foodItem of food) {
-    const foodList = document.createElement('<li>');
+    const foodItem = document.createElement('<li>');
+    
 
-};
+    
+
+}
