@@ -1,11 +1,16 @@
 import { food } from '/food.js';
 
-for (let foodItem of food) {
+const foodList = document.getElementById('food-list');
+
+for (let item of food) {
     const foodItem = document.createElement('li');
-    const foodList = document.createElement('ul');
     const img = document.createElement('img');
-    img src = "./avocado.png"
-    
-    foodItem.textContent = food.name;
-    foodList.textContent = food;
+    const span = document.createElement('span');
+    span.classList.add('food-name');
+    foodItem.classList.add('food-item');
+    img.src = item.img;
+    span.textContent = item.name;
+    foodItem.append(img, span);
+    foodList.append(foodItem);
 }
+
